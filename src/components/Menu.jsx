@@ -1,7 +1,7 @@
 import '../components/Menu.css'
 
 export const Menu = ()=> {
-    return <section className="menu">
+    return <section id="menu" className="menu">
         <div className="container">
           <h2>Naše nabídka</h2>
           <p className="menu-intro">
