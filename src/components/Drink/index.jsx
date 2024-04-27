@@ -2,6 +2,9 @@ import './style.css'
 import { Layer } from '../Layer'
 
 export const Drink = (props) => {
+    const layers=props.layers
+    console.log(layers);
+
     return <div className="drink">
     <div className="drink__product">
       <div className="drink__cup">
@@ -9,7 +12,9 @@ export const Drink = (props) => {
       </div>
       <div className="drink__info">
         <h3>{props.name}</h3>
-        <Layer color="#feeeca" label="mléčná pěna" />
+            {layers.map((layer)=>(
+            <Layer color={layer.color} label={layer.label} />
+            ))}
         
       </div>
     </div>
